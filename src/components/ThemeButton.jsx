@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 import styles from './ThemeButton.module.css';
 
 const ThemeButton = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('Light');
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+    setTheme((prevTheme) => (prevTheme === 'Light' ? 'Dark' : 'Light'));
   };
 
-  const themeClass = theme === 'light' ? styles.lightTheme : styles.darkTheme;
+  const themeClass = theme === 'Light' ? styles.lightTheme : styles.darkTheme;
 
   return (
     <div style={{ textAlign: 'center', margin: '2rem' }}>
-      <button 
+      <button
         className={`${styles.baseButton} ${themeClass}`}
         onClick={toggleTheme}
       >
-        Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
+        Switch to {theme === 'Light' ? 'Dark' : 'Light'} Mode
       </button>
       <p>Current Theme: {theme}</p>
     </div>
